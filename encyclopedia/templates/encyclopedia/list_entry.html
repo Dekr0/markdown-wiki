@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Result
+{% endblock %}
+
+{% block body %}
+    {% for entry_title in entries %}
+        {% include "encyclopedia/entry_card.html" with entry_title=entry_title %}
+    {% endfor %}
+{% endblock %}
